@@ -1,8 +1,12 @@
 import React from "react";
 import product from "./Assets/FakeStoreApi";
+import { Link } from "react-router-dom";
 
 export default function ItemCard() {
   function CreateCard({ item }) {
+
+    
+
     return (
         <div className="card">
             <div className="card-image-container">
@@ -14,10 +18,11 @@ export default function ItemCard() {
           />
             </div>
           
-          <div className="card-content">
-            <h2 className="card-title">{item.title}</h2>
+          <div  className="card-content">
+            <Link to={"/"}><h2 className="card-title"   >{item.title}</h2></Link>
             <p className="card-price">${item.price}</p>
             <p className="card-description">{item.description.substring(50)}</p>
+            <button>Add to Cart</button>
           </div>
         </div>
     );

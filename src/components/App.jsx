@@ -1,14 +1,13 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Carousel from './Carousel'
-import ItemCard from './ItemCard'
-import ProductInfo from './ProductInfo'
+import { BrowserRouter , Routes , Route , element } from 'react-router-dom'
+import Home from './Home/Home'
 
 export default function App() {
   return <>
-  <Navbar/>
-  {/* <ProductInfo/> */}
-  <Carousel/>
-  <ItemCard/>
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element= {<Home/>}/>
+    </Routes>
+  </BrowserRouter>
   </>
 }
